@@ -87,22 +87,22 @@
             maxNativeZoom: 20
         });
         layer_GoogleHybrid_1;
-        map.createPane('pane_Russell1922clip_2');
-        map.getPane('pane_Russell1922clip_2').style.zIndex = 402;
-        var img_Russell1922clip_2 = 'data/Russell1922clip_2.png';
-        var img_bounds_Russell1922clip_2 = [[37.873343799314284,-122.2687246744254],[37.8833086630631,-122.25538097702396]];
-        var layer_Russell1922clip_2 = new L.imageOverlay(img_Russell1922clip_2,
-                                              img_bounds_Russell1922clip_2,
-                                              {pane: 'pane_Russell1922clip_2'});
-        bounds_group.addLayer(layer_Russell1922clip_2);
-        map.createPane('pane_WaterCoclip_3');
-        map.getPane('pane_WaterCoclip_3').style.zIndex = 403;
-        var img_WaterCoclip_3 = 'data/WaterCoclip_3.png';
-        var img_bounds_WaterCoclip_3 = [[37.873343799314284,-122.2687246744254],[37.8833086630631,-122.25538097702396]];
-        var layer_WaterCoclip_3 = new L.imageOverlay(img_WaterCoclip_3,
-                                              img_bounds_WaterCoclip_3,
-                                              {pane: 'pane_WaterCoclip_3'});
-        bounds_group.addLayer(layer_WaterCoclip_3);
+        map.createPane('pane_Airphoto1922_2');
+        map.getPane('pane_Airphoto1922_2').style.zIndex = 402;
+        var img_Airphoto1922_2 = 'data/Airphoto1922_2.png';
+        var img_bounds_Airphoto1922_2 = [[37.873343799314284,-122.2687246744254],[37.8833086630631,-122.25538097702396]];
+        var layer_Airphoto1922_2 = new L.imageOverlay(img_Airphoto1922_2,
+                                              img_bounds_Airphoto1922_2,
+                                              {pane: 'pane_Airphoto1922_2'});
+        bounds_group.addLayer(layer_Airphoto1922_2);
+        map.createPane('pane_WaterCoMap_3');
+        map.getPane('pane_WaterCoMap_3').style.zIndex = 403;
+        var img_WaterCoMap_3 = 'data/WaterCoMap_3.png';
+        var img_bounds_WaterCoMap_3 = [[37.873343799314284,-122.2687246744254],[37.8833086630631,-122.25538097702396]];
+        var layer_WaterCoMap_3 = new L.imageOverlay(img_WaterCoMap_3,
+                                              img_bounds_WaterCoMap_3,
+                                              {pane: 'pane_WaterCoMap_3'});
+        bounds_group.addLayer(layer_WaterCoMap_3);
         function pop_Structures_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -120,10 +120,11 @@
                         <td colspan="2">' + (feature.properties['SitusStr_1'] !== null ? autolinker.link(feature.properties['SitusStr_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['YearBuilt'] !== null ? autolinker.link(feature.properties['YearBuilt'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Fire1923'] !== null ? autolinker.link(feature.properties['Fire1923'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Fire1923'] !== null ? autolinker.link(feature.properties['Fire1923'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Year Built</th>\
+                        <td>' + (feature.properties['YearBltStr'] !== null ? autolinker.link(feature.properties['YearBltStr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -272,7 +273,7 @@
             };
             abstract.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/1923FireArea_5.png" /> 1923 Fire Area': layer_1923FireArea_5,'Structures<br /><table><tr><td style="text-align: center;"><img src="legend/Structures_4_PreFire0.png" /></td><td>Pre Fire</td></tr><tr><td style="text-align: center;"><img src="legend/Structures_4_Footprint1.png" /></td><td>Footprint</td></tr><tr><td style="text-align: center;"><img src="legend/Structures_4_PostFire2.png" /></td><td>Post Fire</td></tr></table>': layer_Structures_4,"Water Co clip": layer_WaterCoclip_3,"Russell 1922 clip": layer_Russell1922clip_2,"Google Hybrid": layer_GoogleHybrid_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/1923FireArea_5.png" /> 1923 Fire Area': layer_1923FireArea_5,'Structures<br /><table><tr><td style="text-align: center;"><img src="legend/Structures_4_PreFire0.png" /></td><td>Pre Fire</td></tr><tr><td style="text-align: center;"><img src="legend/Structures_4_Footprint1.png" /></td><td>Footprint</td></tr><tr><td style="text-align: center;"><img src="legend/Structures_4_PostFire2.png" /></td><td>Post Fire</td></tr></table>': layer_Structures_4,"Water Co Map": layer_WaterCoMap_3,"Airphoto 1922": layer_Airphoto1922_2,"Google Hybrid": layer_GoogleHybrid_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
