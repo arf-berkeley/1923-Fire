@@ -114,17 +114,19 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['SitusStree'] !== null ? autolinker.link(feature.properties['SitusStree'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Fire1923</th>\
+                        <td>' + (feature.properties['Fire1923'] !== null ? autolinker.link(feature.properties['Fire1923'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['SitusStr_1'] !== null ? autolinker.link(feature.properties['SitusStr_1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Fire1923'] !== null ? autolinker.link(feature.properties['Fire1923'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Year Built</th>\
+                        <th scope="row">YearBltStr</th>\
                         <td>' + (feature.properties['YearBltStr'] !== null ? autolinker.link(feature.properties['YearBltStr'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Streetview</th>\
+                        <td>' + (feature.properties['streetview'] !== null ? autolinker.link(feature.properties['streetview'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['StNumName'] !== null ? autolinker.link(feature.properties['StNumName'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
